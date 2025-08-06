@@ -10,6 +10,7 @@ $(".counter").counterUp({
   time: 1000,
 });
 
+// Scroll JS
 document.querySelector(".hero-sec-scroll").addEventListener("click", function(e) {
   e.preventDefault();
   const headerOffset = 100; // navbar height
@@ -22,14 +23,18 @@ document.querySelector(".hero-sec-scroll").addEventListener("click", function(e)
   });
 });
 
-// Feature Filter Js (Without active-bg)
-function filter_animation() {
-  const buttons = document.querySelectorAll(".feature-filter .button-group button");
+// Feature Filter Js
+function setupFilterAnimation(containerSelector) {
+  const container = document.querySelector(containerSelector);
+
+  if (!container) return;
+
+  const buttons = container.querySelectorAll(".button-group button");
 
   if (!buttons.length) return;
 
   // Initial setup for default active button
-  const initial = document.querySelector(".feature-filter .button-group .active");
+  const initial = container.querySelector(".button-group .active");
   if (initial) {
     initial.classList.add("active");
   }
@@ -43,7 +48,9 @@ function filter_animation() {
   });
 }
 
-filter_animation();
+// Call function for both filters
+setupFilterAnimation(".tabs-filter-menu");
+
 
 // Feature Filter Js
 document.addEventListener("DOMContentLoaded", function () {

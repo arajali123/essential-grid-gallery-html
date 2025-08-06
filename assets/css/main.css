@@ -327,6 +327,7 @@ ul {
   background: #E93572;
   border-radius: 40px;
   padding: 21px 30px;
+  text-align: center;
   line-height: 1;
 }
 
@@ -341,6 +342,7 @@ ul {
   background: #315EFB;
   border-radius: 40px;
   padding: 21px 30px;
+  text-align: center;
   line-height: 1;
 }
 
@@ -351,6 +353,7 @@ ul {
 .view-btn {
   display: flex;
   align-items: center;
+  justify-content: center;
   column-gap: 6px;
   color: #ffffff;
   font-size: 18;
@@ -617,34 +620,6 @@ START: Feature Tabs CSS
   margin-bottom: 34px;
 }
 
-.feature-tabs-main-wrapper .feature-filter {
-  text-align: center;
-  margin-bottom: 52px;
-}
-
-.feature-tabs-main-wrapper .feature-filter .button-group {
-  display: inline-block;
-  position: relative;
-}
-
-.feature-tabs-main-wrapper .feature-filter .button-group button {
-  display: inline-block;
-  position: relative;
-  color: #121212;
-  font-size: 17px;
-  border: 1px solid #D7D7D7;
-  padding: 11px 20px;
-  border-radius: 30px;
-  line-height: 1;
-  z-index: 2;
-}
-
-.feature-tabs-main-wrapper .feature-filter .button-group button.active {
-  color: #ffffff;
-  background-color: #F15A5A;
-  border-color: #F15A5A;
-}
-
 .feature-tabs-main-wrapper .feature-box {
   margin-right: -20px;
 }
@@ -672,7 +647,7 @@ START: Feature Tabs CSS
 }
 
 .feature-item .feature-image {
-  padding: 34px;
+  margin: 34px;
 }
 
 .feature-item .feature-image img {
@@ -682,6 +657,70 @@ START: Feature Tabs CSS
 .feature-item .feature-header {
   border-top: 1px solid #E7E7E7;
   padding: 24px 34px 36px;
+}
+
+.feature-item .feature-image {
+  display: flex;
+  position: relative;
+}
+
+.feature-item .feature-image::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(18, 18, 18, 0.5);
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.feature-item .feature-image .feature-filter-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.3s ease-in-out 0s;
+  z-index: 2;
+}
+
+.feature-item:hover .feature-image::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.feature-item:hover .feature-image .feature-filter-button {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.tabs-filter-menu {
+  text-align: center;
+  margin-bottom: 52px;
+}
+
+.tabs-filter-menu .button-group {
+  display: inline-block;
+  position: relative;
+}
+
+.tabs-filter-menu .button-group button {
+  display: inline-block;
+  position: relative;
+  color: #121212;
+  font-size: 17px;
+  border: 1px solid #D7D7D7;
+  padding: 11px 20px;
+  border-radius: 30px;
+  line-height: 1;
+  z-index: 2;
+}
+
+.tabs-filter-menu .button-group button.active {
+  color: #ffffff;
+  background-color: #F15A5A;
+  border-color: #F15A5A;
 }
 
 /* !END: Feature Tabs CSS *
@@ -732,6 +771,7 @@ START: Fun Fact CSS
   background-color: #ffffff;
   box-shadow: 0px 21px 34px 0px #4B433A08;
   border: 1px solid #F8EBDD;
+  padding: 73px 25px 82px;
   border-radius: 50px;
 }
 
@@ -743,6 +783,7 @@ START: Fun Fact CSS
   height: 73px;
   border-radius: 25px;
   background: rgba(182, 217, 255, 0.5);
+  margin-bottom: 16px;
 }
 
 .counter-item:nth-child(2) .counter-icons {
@@ -753,4 +794,42 @@ START: Fun Fact CSS
   background: rgba(255, 182, 232, 0.5);
 }
 
+.counter-item:nth-child(4) .counter-icons {
+  background: rgba(255, 215, 182, 0.5);
+}
+
+.counter-item .counter-text .count-number {
+  display: block;
+  color: #0D0D0D;
+  margin-bottom: 7px;
+}
+
+.counter-item .counter-text .count-number .stars {
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 44px;
+}
+
+.counter-item .counter-text .sub-title {
+  color: #121212;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
 /* !END: Fun Fact CSS *
+
+/**----------------------------------------
+START: Demo Tabs CSS
+----------------------------------------*/
+.demo-tabs-section {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+
+.demo-tabs-section .heading-area {
+  max-width: 695px;
+  margin-bottom: 42px;
+}
+
+/* !END: Demo Tabs CSS *
