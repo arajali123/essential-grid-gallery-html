@@ -351,23 +351,31 @@ ul {
 }
 
 .view-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  column-gap: 6px;
+  font-size: 18px;
   color: #ffffff;
-  font-size: 18;
+  font-weight: 700;
   background: #E93572;
-  border-radius: 12px;
-  padding: 13px 16px;
+  border-radius: 40px;
+  padding: 13px 20px;
   line-height: 1;
 }
 
-.view-btn span {
-  display: flex;
+.view-btn:hover {
+  color: #ffffff;
 }
 
-.view-btn:hover {
+.load-more-btn {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 18px;
+  color: #ffffff;
+  background: #E93572;
+  border-radius: 40px;
+  padding: 21px 30px;
+  line-height: 1;
+}
+
+.load-more-btn:hover {
   color: #ffffff;
 }
 
@@ -604,7 +612,7 @@ START: Feature Tabs CSS
 ----------------------------------------*/
 .feature-tabs-section {
   padding-top: 120px;
-  padding-bottom: 80px;
+  padding-bottom: 120px;
   background: #F9FDFF;
   border-radius: 80px;
   position: relative;
@@ -617,19 +625,23 @@ START: Feature Tabs CSS
   margin-bottom: 34px;
 }
 
-.feature-tabs-main-wrapper .feature-box {
+.tabs-main-wrapper .demo-box,
+.tabs-main-wrapper .filter-box {
   margin-right: -20px;
 }
 
-.feature-tabs-main-wrapper .feature-box .feature-sizer {
+.tabs-main-wrapper .demo-box .filter-sizer,
+.tabs-main-wrapper .filter-box .filter-sizer {
   width: 33.33%;
 }
 
-.feature-tabs-main-wrapper .feature-box .gutter-sizer {
+.tabs-main-wrapper .demo-box .gutter-sizer,
+.tabs-main-wrapper .filter-box .gutter-sizer {
   width: 0%;
 }
 
 .feature-item {
+  position: relative;
   background-color: var(--tj-theme-accent-2);
   width: calc(33.33% - 20px);
   margin-right: 20px;
@@ -643,17 +655,37 @@ START: Feature Tabs CSS
   margin-right: 0;
 }
 
-.feature-item .feature-image {
-  margin: 34px;
+.feature-item.overly-color-1 {
+  background: linear-gradient(158.96deg, #FFFFFF 28.04%, #FFFFFF 77.65%, #FCD1CC 97.16%);
+
 }
 
-.feature-item .feature-image img {
-  width: 100%;
+.feature-item.overly-color-2 {
+  background: linear-gradient(136.15deg, #FFFFFF 15.5%, #FFFFFF 68.36%, #CCF2FC 96.36%);
 }
 
-.feature-item .feature-header {
-  border-top: 1px solid #E7E7E7;
-  padding: 24px 34px 36px;
+.feature-item.overly-color-3 {
+  background: linear-gradient(136.15deg, #FFFFFF 15.5%, rgba(255, 255, 255, 0) 55.38%, #FCF5CC 96.36%);
+}
+
+.feature-item.overly-color-4 {
+  background: linear-gradient(150.58deg, #FFFFFF 24.92%, #FFFFFF 74.76%, #CCFCD5 96.85%);
+}
+
+.feature-item.overly-color-5 {
+  background: linear-gradient(152.94deg, #FFFFFF 21.15%, #FFFFFF 70.68%, #FCCCF4 96.94%);
+}
+
+.feature-item.overly-color-6 {
+  background: linear-gradient(161.5deg, #FFFFFF 24.04%, #FFFFFF 74.41%, #CCE2FC 97.27%);
+}
+
+.feature-item.overly-color-7 {
+  background: linear-gradient(151.84deg, #FFFFFF 26.23%, #FFFFFF 72.35%, #FCE4CC 96.9%);
+}
+
+.feature-item.overly-color-8 {
+  background: linear-gradient(153.77deg, #FFFFFF 24.83%, #FFFFFF 71.84%, #D3CCFC 96.97%);
 }
 
 .feature-item .feature-image {
@@ -668,10 +700,22 @@ START: Feature Tabs CSS
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(18, 18, 18, 0.5);
-  z-index: 2;
+  background: linear-gradient(152.97deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+  backdrop-filter: blur(6.50px);
   opacity: 0;
   visibility: hidden;
+  border-radius: 27px 27px 0 0;
+  z-index: 2;
+}
+
+.feature-item .feature-image img {
+  width: 100%;
+  border-radius: 28px 28px 0 0;
+}
+
+.feature-item .feature-header {
+  border-top: 1px solid #E7E7E7;
+  padding: 24px 34px 36px;
 }
 
 .feature-item .feature-image .feature-filter-button {
@@ -692,17 +736,21 @@ START: Feature Tabs CSS
   transform: translate(-50%, -50%) scale(1);
 }
 
-.tabs-filter-menu {
+.tabs-common-menu {
   text-align: center;
   margin-bottom: 52px;
 }
 
-.tabs-filter-menu .button-group {
-  display: inline-block;
+.tabs-common-menu .filter-common-group {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  row-gap: 10px;
   position: relative;
 }
 
-.tabs-filter-menu .button-group button {
+.tabs-common-menu .filter-common-group button {
   display: inline-block;
   position: relative;
   color: #121212;
@@ -714,16 +762,20 @@ START: Feature Tabs CSS
   z-index: 2;
 }
 
-.tabs-filter-menu .button-group button:hover {
+.tabs-common-menu .filter-common-group button:hover {
   color: #ffffff;
   background-color: #F15A5A;
   border-color: #F15A5A;
 }
 
-.tabs-filter-menu .button-group button.active {
+.tabs-common-menu .filter-common-group button.active {
   color: #ffffff;
   background-color: #F15A5A;
   border-color: #F15A5A;
+}
+
+.feature-load-more-button {
+  text-align: center;
 }
 
 /* !END: Feature Tabs CSS *
@@ -804,7 +856,6 @@ START: Fun Fact CSS
 .counter-item .counter-text .count-number {
   display: block;
   color: #0D0D0D;
-  margin-bottom: 7px;
 }
 
 .counter-item .counter-text .count-number .stars {
@@ -814,10 +865,12 @@ START: Fun Fact CSS
 }
 
 .counter-item .counter-text .sub-title {
+  display: block;
   color: #121212;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+  margin-top: 7px;
 }
 
 /* !END: Fun Fact CSS *
@@ -833,6 +886,69 @@ START: Demo Tabs CSS
 .demo-tabs-section .heading-area {
   max-width: 695px;
   margin-bottom: 42px;
+}
+
+.demo-filter-item {
+  position: relative;
+  width: calc(33.33% - 20px);
+  margin-right: 20px;
+  margin-bottom: 50px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.demo-filter-item .demo-images {
+  display: flex;
+  position: relative;
+  margin-bottom: 23.35px;
+}
+
+.demo-filter-item .demo-images::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(152.97deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 100%);
+  backdrop-filter: blur(6.50px);
+  opacity: 0;
+  visibility: hidden;
+  border-radius: 25px;
+  z-index: 2;
+}
+
+.demo-filter-item .demo-images img {
+  width: 100%;
+  border-radius: 25px;
+}
+
+.demo-filter-item .demo-images .demo-filter-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: all 0.3s ease-in-out 0s;
+  z-index: 2;
+}
+
+.demo-filter-item .demo-content {
+  padding-right: 48px;
+}
+
+.demo-filter-item .demo-content .demo-desc {
+  font-size: 16px;
+  margin-top: 15.68px;
+  line-height: 24px;
+}
+
+.demo-filter-item:hover .demo-images::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.demo-filter-item:hover .demo-images .demo-filter-button {
+  transform: translate(-50%, -50%) scale(1);
 }
 
 /* !END: Demo Tabs CSS *
