@@ -379,6 +379,17 @@ ul {
   color: #ffffff;
 }
 
+.white-btn {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 18px;
+  color: #121212;
+  background: #ffffff;
+  padding: 21px 30px;
+  border-radius: 40px;
+  line-height: 1;
+}
+
 /* Header CSS */
 .heading-area {
   width: 100%;
@@ -994,6 +1005,11 @@ START: Steps CSS
   padding: 100px 125px 120px;
 }
 
+.steps-main-wrapper .steps-free-button {
+  text-align: center;
+  margin-top: 64px;
+}
+
 .steps-content-wrap {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -1004,7 +1020,7 @@ START: Steps CSS
   background: #ffffff;
   border: 1px solid #F8EBDD;
   border-radius: 50px;
-  padding: 57px 45px 58px 49px;
+  padding: 57px 40px 58px;
 }
 
 .steps-item .sub-title {
@@ -1016,13 +1032,37 @@ START: Steps CSS
   font-weight: 600;
   padding: 6px 13px;
   border-radius: 16px 16px 16px 0;
-  margin-bottom: 27px;
+  position: relative;
   line-height: 30px;
+}
+
+.steps-item .border-line {
+  display: block;
+  position: relative;
+  border-bottom: 1px solid #E93572;
+  width: 100%;
+}
+
+.steps-item .border-line::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: -5px;
+  width: 25px;
+  height: 1px;
+  background-color: #E93572;
+  transform: rotate(25deg);
+}
+
+.steps-item .steps-title {
+  padding-top: 27px;
 }
 
 .steps-item .steps-desc {
   margin-top: 17px;
   line-height: 26px;
 }
+
+@media (max-width: 1399px) {}
 
 /* !END: Steps CSS *
