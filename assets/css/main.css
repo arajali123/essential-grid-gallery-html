@@ -431,6 +431,7 @@ START: Header CSS
 .header-menu-wrapper .header-item.center {
   flex: 2 2 0%;
   justify-content: flex-end;
+  word-break: break-word;
 }
 
 .header-menu-wrapper .header-item.right {
