@@ -90,6 +90,45 @@ h6 {
   line-height: 30px;
 }
 
+@media (max-width: 1199px) {
+  h2 {
+    font-size: 45px;
+  }
+
+  h3 {
+    font-size: 34px;
+    line-height: 34px;
+  }
+}
+
+@media (max-width: 991px) {
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  h2 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  h3 {
+    font-size: 28px;
+    line-height: 30px;
+  }
+
+  body {
+    font-size: 15px;
+    line-height: 26px;
+  }
+}
+
 h1 a,
 h2 a,
 h3 a,
@@ -299,8 +338,8 @@ ul {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 24px;
-  padding-right: 24px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 /**
@@ -388,6 +427,18 @@ ul {
   padding: 21px 30px;
   border-radius: 40px;
   line-height: 1;
+}
+
+@media (max-width: 767px) {
+  .white-btn {
+    font-size: 16px;
+    padding: 19px 30px;
+  }
+
+  .primary-btn {
+    font-size: 16px;
+    padding: 19px 30px;
+  }
 }
 
 /* Header CSS */
@@ -509,8 +560,7 @@ START: Hero CSS
 }
 
 .hero-main-wrapper .hero-left-content {
-  max-width: 613px;
-  width: 100%;
+  width: 42%;
 }
 
 .hero-main-wrapper .hero-left-content .hero-desc {
@@ -529,8 +579,7 @@ START: Hero CSS
 
 .hero-images-group {
   display: flex;
-  max-width: 724px;
-  width: 100%;
+  width: 50%;
 }
 
 .hero-images-group img {
@@ -797,7 +846,7 @@ START: Fun Fact CSS
 .counter-section {
   background-color: #FFFCF3;
   padding-top: 210px;
-  padding-bottom: 120px;
+  padding-bottom: 195px;
   margin-top: -85px;
 }
 
@@ -826,6 +875,7 @@ START: Fun Fact CSS
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   column-gap: 18px;
+  row-gap: 18px;
   max-width: 1390px;
   width: 100%;
   margin-left: auto;
@@ -882,6 +932,66 @@ START: Fun Fact CSS
   font-size: 16px;
   line-height: 24px;
   margin-top: 7px;
+}
+
+@media (max-width: 1199px) {
+  .counter-section {
+    padding-top: 180px;
+    padding-bottom: 175px;
+  }
+
+  .counter-item {
+    padding: 50px 25px 55px;
+  }
+
+  .counter-item .counter-text .count-number .stars {
+    font-size: 25px;
+  }
+}
+
+@media (max-width: 991px) {
+  .counter-section {
+    padding-top: 160px;
+    padding-bottom: 160px;
+  }
+
+  .counter-main-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .counter-section {
+    padding-top: 140px;
+    padding-bottom: 54px;
+  }
+
+  .counter-section .heading-area {
+    margin-bottom: 30px;
+  }
+
+  .counter-section .heading-area .heading-desc {
+    margin-top: 15px;
+  }
+
+  .counter-item {
+    padding: 30px 15px 36px;
+    border-radius: 40px;
+  }
+
+  .counter-item .counter-icons {
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+  }
+
+  .counter-item .counter-text .count-number .stars {
+    font-size: 18px;
+  }
+
+  .counter-item .counter-text .sub-title {
+    font-size: 14px;
+  }
 }
 
 /* !END: Fun Fact CSS *
@@ -972,6 +1082,20 @@ START: Demo Tabs CSS
   transform: translate(-50%, -50%) scale(1);
 }
 
+.group-section {
+  position: relative;
+  background: #ffffff;
+  border-radius: 80px;
+  margin-top: -75px;
+}
+
+@media (max-width: 767px) {
+  .group-section {
+    border-radius: 0px;
+    margin-top: 0px;
+  }
+}
+
 /* !END: Demo Tabs CSS *
 
 /**----------------------------------------
@@ -1014,6 +1138,7 @@ START: Steps CSS
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 20px;
+  row-gap: 12px;
 }
 
 .steps-item {
@@ -1063,6 +1188,341 @@ START: Steps CSS
   line-height: 26px;
 }
 
-@media (max-width: 1399px) {}
+@media (max-width: 1399px) {
+  .steps-main-wrapper {
+    padding: 100px 50px 120px;
+  }
+
+  .steps-item {
+    padding: 57px 30px 58px;
+  }
+}
+
+@media (max-width: 1199px) {
+  .steps-section {
+    padding-bottom: 100px;
+  }
+
+  .steps-main-wrapper {
+    padding: 100px 50px 100px;
+    border-radius: 50px;
+  }
+}
+
+@media (max-width: 991px) {
+  .steps-section {
+    padding-bottom: 80px;
+  }
+
+  .steps-main-wrapper {
+    padding: 80px 30px 80px;
+    border-radius: 40px;
+  }
+
+  .steps-content-wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+  .steps-section {
+    padding-bottom: 51px;
+  }
+
+  .steps-section .page-width {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .steps-section .page-width .heading-area {
+    padding-left: 6px;
+    padding-right: 6px;
+    margin-bottom: 30px;
+  }
+
+  .steps-section .page-width .heading-area .heading-desc {
+    font-size: 15px;
+    line-height: 23px;
+    margin-top: 14px;
+  }
+
+  .steps-main-wrapper {
+    border-radius: 0px;
+    padding: 54px 15px 55px;
+  }
+
+  .steps-content-wrap {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .steps-item {
+    border-radius: 40px;
+    padding: 33px 26px 36px;
+  }
+
+  .steps-item .steps-desc {
+    margin-top: 12px;
+  }
+
+  .steps-main-wrapper .steps-free-button {
+    margin-top: 32px;
+  }
+}
 
 /* !END: Steps CSS *
+
+/**----------------------------------------
+START: Pricing Table CSS
+----------------------------------------*/
+.pricing-table-section {
+  padding-bottom: 120px;
+}
+
+.pricing-table-section .heading-area {
+  max-width: 520px;
+  margin-bottom: 39px;
+}
+
+.pricing-table-section .heading-area .heading-desc {
+  margin-top: 22px;
+}
+
+.pricing-table-main-wrapper {
+  background: #ffffff;
+  padding: 25px 25px;
+  border-radius: 30px;
+  box-shadow: 0px 4px 26px 0px #3F352814;
+  overflow: hidden;
+}
+
+.pricing-table-main-wrapper table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.pricing-table-main-wrapper table td,
+.pricing-table-main-wrapper table th {
+  text-align: left;
+}
+
+.pricing-table-main-wrapper table th {
+  color: #121212;
+  font-weight: 600;
+  font-size: 22px;
+  font-family: var(--sds-ff-body);
+  background-color: #F3F6FA;
+  padding: 19px 25px;
+}
+
+.pricing-table-main-wrapper table td {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: var(--sds-ff-body);
+  color: #121212;
+  padding: 15px 25px;
+}
+
+.pricing-table-main-wrapper table td:first-child {
+  font-weight: 500;
+  text-align: left;
+  border-radius: 12px 0 0 12px;
+}
+
+.pricing-table-main-wrapper table td:last-child {
+  border-radius: 0 12px 12px 0;
+}
+
+.pricing-table-main-wrapper table th:first-child {
+  border-radius: 12px 0 0 12px;
+  text-align: left;
+}
+
+.pricing-table-main-wrapper table td span {
+  display: flex;
+}
+
+.pricing-table-main-wrapper table th:last-child {
+  border-radius: 0 12px 12px 0;
+}
+
+.pricing-table-main-wrapper table tr {
+  background-color: #F3F6FA;
+}
+
+.pricing-table-main-wrapper table tr:nth-child(even) {
+  background-color: #ffffff;
+}
+
+.pricing-table-section .table-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 64px;
+}
+
+@media (max-width: 1199px) {
+  .pricing-table-section {
+    padding-bottom: 100px;
+  }
+
+  .pricing-table-main-wrapper table td {
+    padding: 15px 12px;
+  }
+
+  .pricing-table-main-wrapper table td:first-child {
+    padding: 15px 10px 15px 25px;
+  }
+
+  .pricing-table-section .table-button {
+    margin-top: 55px;
+  }
+}
+
+@media (max-width: 991px) {
+  .pricing-table-section {
+    padding-bottom: 80px;
+  }
+
+  .pricing-table-main-wrapper table {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: inherit;
+    white-space: nowrap;
+    scrollbar-color: rgba(18, 18, 18, 0.5) rgba(18, 18, 18, 0.5);
+    scrollbar-width: thin;
+  }
+
+  .pricing-table-section .table-button {
+    margin-top: 50px;
+  }
+
+  .pricing-table-main-wrapper table td {
+    padding: 15px 25px;
+  }
+}
+
+@media (max-width: 767px) {
+  .pricing-table-section {
+    padding-bottom: 54px;
+  }
+
+  .pricing-table-section .table-button {
+    margin-top: 45px;
+  }
+
+  .pricing-table-main-wrapper table th {
+    padding: 21px 20px;
+  }
+
+  .pricing-table-section .pricing-table-main-wrapper table td {
+    padding: 17px 20px;
+  }
+
+}
+
+/* !END: Pricing Table CSS *
+
+/**----------------------------------------
+START: FAQ CSS
+----------------------------------------*/
+.faq-section {
+  padding-top: 195px;
+  padding-bottom: 120px;
+  background-color: #FFFCF3;
+  margin-top: -75px;
+}
+
+.faq-section .heading-area {
+  text-align: left;
+}
+
+.faq-section .heading-area .sub-title {
+  display: flex;
+  align-items: center;
+  column-gap: 7px;
+  margin-bottom: 16px;
+}
+
+.faq-section .heading-area .heading-title {
+  line-height: 64px;
+}
+
+.faq-main-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 70px;
+  justify-content: space-between;
+}
+
+.faq-main-wrapper .faq-left-content {
+  width: 39%;
+}
+
+.accordion-item {
+  width: 56%;
+}
+
+.accordion-item .accordion-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.accordion-item .accordion-list li {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.accordion-item .accordion-list li .faq-title {
+  font-family: var(--sds-ff-body);
+  font-weight: 500;
+  letter-spacing: -0.48px;
+  cursor: pointer;
+}
+
+.accordion-item .accordion-list li.active .faq-title::after {
+  transform: rotate(45deg);
+}
+
+.accordion-item .accordion-list li .faq-title::after {
+  content: "\f278";
+  font-family: "material-design-iconic-font";
+  position: absolute;
+  right: 0;
+  top: 0;
+  color: #fcc110;
+  transition: all 0.3s ease-in-out;
+  font-size: 18px;
+}
+
+.accordion-item .accordion-list li div.faq-desc {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.accordion-item .accordion-list li div.faq-desc p {
+  position: relative;
+  display: block;
+  font-weight: 300;
+  padding: 10px 0 0 0;
+  cursor: pointer;
+  line-height: 150%;
+  margin: 0 0 15px 0;
+  font-size: 14px;
+}
+
+/* !END: FAQ CSS *

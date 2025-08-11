@@ -3,6 +3,18 @@
 ****************************************************
 
 ****************************************************/
+// Scroll JS
+document.querySelector(".hero-sec-scroll").addEventListener("click", function(e) {
+  e.preventDefault();
+  const headerOffset = 100; // navbar height
+  const element = document.querySelector("#scroll-section");
+  const offsetPosition = element.offsetTop - headerOffset;
+
+  window.scrollTo({
+    top: offsetPosition,
+    behavior: "smooth"
+  });
+});
 
 // Counter JS
 function animateCounter(counter, target, duration) {
@@ -42,20 +54,6 @@ const observer = new IntersectionObserver(entries => {
 });
 
 observer.observe(section);
-
-
-// Scroll JS
-document.querySelector(".hero-sec-scroll").addEventListener("click", function(e) {
-  e.preventDefault();
-  const headerOffset = 100; // navbar height
-  const element = document.querySelector("#scroll-section");
-  const offsetPosition = element.offsetTop - headerOffset;
-
-  window.scrollTo({
-    top: offsetPosition,
-    behavior: "smooth"
-  });
-});
 
 // Filter Menu Js
 function setupFilterAnimation(containerSelectors) {
@@ -133,6 +131,43 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+// Accordion JS
+document.addEventListener("DOMContentLoaded", function () {
+  const accordionItems = document.querySelectorAll(".accordion-list > li");
+
+  accordionItems.forEach(item => {
+    const desc = item.querySelector(".faq-desc");
+    if (desc) {
+      desc.style.maxHeight = "0px";
+      desc.style.overflow = "hidden";
+      desc.style.transition = "max-height 0.3s ease";
+    }
+  });
+
+  accordionItems.forEach(item => {
+    item.addEventListener("click", function (e) {
+      e.preventDefault();
+      const desc = this.querySelector(".faq-desc");
+      const activeItem = document.querySelector(".accordion-list > li.active");
+
+      if (this.classList.contains("active")) {
+        this.classList.remove("active");
+        if (desc) desc.style.maxHeight = "0px";
+      } else {
+        
+        if (activeItem) {
+          activeItem.classList.remove("active");
+          const activeDesc = activeItem.querySelector(".faq-desc");
+          if (activeDesc) activeDesc.style.maxHeight = "0px";
+        }
+        this.classList.add("active");
+        if (desc) desc.style.maxHeight = desc.scrollHeight + "px";
+      }
+    });
+  });
+});
+
 
 
 
