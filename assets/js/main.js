@@ -133,40 +133,55 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Accordion JS
-document.addEventListener("DOMContentLoaded", function () {
-  const accordionItems = document.querySelectorAll(".accordion-list > li");
+document.querySelectorAll(".accordion-item.active .faq-text").forEach(content => {
+  content.style.height = content.scrollHeight + "px";
+});
 
-  accordionItems.forEach(item => {
-    const desc = item.querySelector(".faq-desc");
-    if (desc) {
-      desc.style.maxHeight = "0px";
-      desc.style.overflow = "hidden";
-      desc.style.transition = "max-height 0.3s ease";
-    }
-  });
+document.querySelectorAll(".accordion-item .faq-title").forEach((title) => {
+  title.addEventListener("click", function () {
+      const item = this.parentElement;
+      const content = item.querySelector(".faq-text");
 
-  accordionItems.forEach(item => {
-    item.addEventListener("click", function (e) {
-      e.preventDefault();
-      const desc = this.querySelector(".faq-desc");
-      const activeItem = document.querySelector(".accordion-list > li.active");
+      document.querySelectorAll(".accordion-item.active").forEach((otherItem) => {
+          if (otherItem !== item) {
+              otherItem.classList.remove("active");
+              const otherContent = otherItem.querySelector(".faq-text");
+              otherContent.style.height = "0px";
+          }
+      });
 
-      if (this.classList.contains("active")) {
-        this.classList.remove("active");
-        if (desc) desc.style.maxHeight = "0px";
+      if (item.classList.contains("active")) {
+          item.classList.remove("active");
+          content.style.height = "0px";
       } else {
-        
-        if (activeItem) {
-          activeItem.classList.remove("active");
-          const activeDesc = activeItem.querySelector(".faq-desc");
-          if (activeDesc) activeDesc.style.maxHeight = "0px";
-        }
-        this.classList.add("active");
-        if (desc) desc.style.maxHeight = desc.scrollHeight + "px";
+          item.classList.add("active");
+          content.style.height = content.scrollHeight + "px";
       }
-    });
   });
 });
+
+// Testimonial JS
+if ($(".testimonial-slider").length > 0) {
+  var testimonial = new Swiper(".testimonial-slider", {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    loop: true,
+    autoplay: {
+      delay: 7000,
+    },
+    speed: 2000,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+}
+
+
 
 
 
