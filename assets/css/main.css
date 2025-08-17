@@ -403,7 +403,7 @@ ul {
 .primary-btn {
   position: relative;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   color: #ffffff;
   background: #E93572;
   border-radius: 40px;
@@ -443,7 +443,7 @@ ul {
 .secondary-btn {
   position: relative;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
   color: #ffffff;
   background: #315EFB;
   border-radius: 40px;
@@ -481,24 +481,51 @@ ul {
 }
 
 .view-btn {
-  font-size: 18px;
+  position: relative;
+  font-size: 16px;
   color: #ffffff;
-  font-weight: 700;
+  font-weight: 400;
   background: #E93572;
   border-radius: 40px;
-  padding: 12px 20px;
+  padding: 9px 20px;
   word-break: break-word;
+  overflow: hidden;
   line-height: 1;
+}
+
+.view-btn::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #EF4646;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(0);
+  border-radius: 40px;
+}
+
+.view-btn span {
+  position: relative;
+  z-index: 2;
 }
 
 .view-btn:hover {
   color: #ffffff;
 }
 
+.view-btn:hover:before {
+  transform: scale(1);
+  opacity: 1;
+  visibility: visible;
+}
+
 .white-btn {
   display: inline-block;
   position: relative;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 18px;
   color: #121212;
   background: #ffffff;
@@ -785,8 +812,6 @@ START: Hero CSS
   transform: skew(0deg, -42deg);
 }
 
-
-
 .hero-main-wrapper .hero-group-box {
   position: relative;
   width: 50%;
@@ -797,14 +822,12 @@ START: Hero CSS
   position: absolute;
   top: 10px;
   right: -60px;
-  animation: shakeY 2.5s ease-in-out infinite;
 }
 
 .hero-main-wrapper .hero-group-box .shapes-2 {
   position: absolute;
   left: 95px;
   bottom: 40px;
-  animation: shakeX 2.5s ease-in-out infinite;
 }
 
 .hero-main-wrapper .hero-group-box .shapes-3 {
@@ -818,7 +841,6 @@ START: Hero CSS
   position: absolute;
   left: 50px;
   bottom: 150px;
-  animation: zoom-in-zoom-out 2s ease-out infinite;
 }
 
 .hero-main-wrapper .hero-group-box .shapes-5 {
@@ -841,17 +863,18 @@ START: Hero CSS
   flex-direction: column;
   width: 50%;
   max-height: max-content;
-  --desktop-movement-speed: 20s;
+  --desktop-movement-speed: 45s;
   --mobile-movement-speed: 11s;
-  transform: rotate(-3deg);
+  transform: rotate(-16deg);
 }
 
 .hero-marquee-wrap .images-group:last-child {
   position: relative;
-  top: -10px;
-  border-radius: 0 200px 0 0;
+  transform: rotate(-16deg);
+  height: 685px;
+  top: -50px;
   overflow: hidden;
-  transform: rotate(-3deg);
+  border-radius: 0 715px 0 0;
 }
 
 .hero-marquee-wrap .images-group-anim {
@@ -919,11 +942,11 @@ START: Hero CSS
   position: absolute;
   right: 0;
   top: 0;
-  column-gap: 10px;
+  column-gap: 25px;
   max-width: 560px;
   width: 100%;
   height: 560px;
-  border-radius: 0 0 0 200px;
+  border-radius: 0 0 0 180px;
   overflow: hidden;
 }
 
@@ -963,6 +986,10 @@ START: Hero CSS
     height: 466px;
   }
 
+  .hero-marquee-wrap .images-anim-box {
+    column-gap: 35px;
+  }
+
   .hero-main-wrapper .hero-button {
     margin-top: 50px;
   }
@@ -974,6 +1001,10 @@ START: Hero CSS
     text-align: center;
   }
 
+  .hero-marquee-wrap .images-group:last-child {
+    top: -90px;
+  }
+
   .hero-main-wrapper .hero-left-content {
     width: 100%;
   }
@@ -983,6 +1014,7 @@ START: Hero CSS
   }
 
   .hero-marquee-wrap .images-anim-box {
+    column-gap: 35px;
     max-width: 100%;
   }
 
@@ -1017,12 +1049,12 @@ START: Hero CSS
   }
 
   .hero-marquee-wrap .images-anim-box {
-    border-radius: 0 0 0 100px;
+    border-radius: 0 0 0 200px;
+    column-gap: 45px;
   }
 
   .hero-marquee-wrap .images-group:last-child {
-    border-radius: 0 100px 0 0;
-    top: -4px;
+    border-radius: 0 200px 0 0;
   }
 
   .hero-sec-scroll {
@@ -1031,8 +1063,8 @@ START: Hero CSS
 
   .hero-main-wrapper .hero-group-box .shapes-1 {
     top: 0;
-    right: -15px;
-    width: 140px;
+    right: 0;
+    width: 100px;
   }
 
   .hero-main-wrapper .hero-group-box {
@@ -1051,7 +1083,6 @@ START: Hero CSS
     position: absolute;
     bottom: -10px;
     left: -15px;
-    animation: shakeY 2.5s ease-in-out infinite;
   }
 }
 
@@ -1063,7 +1094,7 @@ START: Feature Tabs CSS
 .feature-tabs-section {
   padding-top: 120px;
   padding-bottom: 120px;
-  background: #F9FDFF;
+  background: #ffffff;
   border-radius: 80px;
   position: relative;
   margin-top: -118px;
@@ -1091,10 +1122,9 @@ START: Feature Tabs CSS
 
 .feature-item {
   position: relative;
-  background-color: var(--tj-theme-accent-2);
   width: calc(33.33% - 20px);
   margin-right: 20px;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   box-sizing: border-box;
   border: 1px solid #D7D7D7;
   border-radius: 28px;
@@ -1106,7 +1136,6 @@ START: Feature Tabs CSS
 
 .feature-item.overly-color-1 {
   background: linear-gradient(158.96deg, #FFFFFF 28.04%, #FFFFFF 77.65%, #FCD1CC 97.16%);
-
 }
 
 .feature-item.overly-color-2 {
@@ -1168,6 +1197,7 @@ START: Feature Tabs CSS
 }
 
 .feature-item .feature-image .feature-filter-button {
+  display: flex;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1228,6 +1258,7 @@ START: Feature Tabs CSS
   align-items: center;
   justify-content: center;
   text-align: center;
+  margin-top: 44px;
 }
 
 @media (max-width: 767px) {
@@ -1236,6 +1267,10 @@ START: Feature Tabs CSS
     padding-bottom: 54px;
     border-radius: 0;
     margin-top: 0;
+  }
+
+  .feature-load-more-button {
+    margin-top: 24px;
   }
 }
 
@@ -2279,57 +2314,5 @@ START: Testimonial CSS
 
   100% {
     transform: translateY(0%);
-  }
-}
-
-@keyframes rotateImg {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes shakeY {
-  0% {
-    transform: translateY(10px);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
-
-  100% {
-    transform: translateY(10px);
-  }
-}
-
-@keyframes shakeX {
-  0% {
-    transform: translateX(10px);
-  }
-
-  50% {
-    transform: translateX(-10px);
-  }
-
-  100% {
-    transform: translateX(10px);
-  }
-}
-
-@keyframes zoom-in-zoom-out {
-  0% {
-    transform: scale(1, 1);
-  }
-
-  50% {
-    transform: scale(1.5, 1.5);
-  }
-
-  100% {
-    transform: scale(1, 1);
   }
 }
