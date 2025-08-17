@@ -865,14 +865,14 @@ START: Hero CSS
   max-height: max-content;
   --desktop-movement-speed: 45s;
   --mobile-movement-speed: 11s;
-  transform: rotate(-9deg);
+  transform: rotate(-7deg);
 }
 
 .hero-marquee-wrap .images-group:last-child {
   position: relative;
-  transform: rotate(-9deg);
+  transform: rotate(-7deg);
   height: 685px;
-  top: -25px;
+  top: -20px;
   overflow: hidden;
   border-radius: 0 275px 0 0;
 }
@@ -1050,7 +1050,7 @@ START: Hero CSS
 
   .hero-marquee-wrap .images-anim-box {
     border-radius: 0 0 0 200px;
-    column-gap: 30px;
+    column-gap: 25px;
   }
 
   .hero-marquee-wrap .images-group:last-child {
