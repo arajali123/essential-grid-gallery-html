@@ -370,6 +370,7 @@ ul {
   border-radius: 60px;
   padding: 14px 24px;
   overflow: hidden;
+  word-break: break-word;
   z-index: 2;
   line-height: 1;
 }
@@ -409,6 +410,7 @@ ul {
   padding: 21px 30px;
   text-align: center;
   overflow: hidden;
+  word-break: break-word;
   z-index: 2;
   line-height: 1;
 }
@@ -448,6 +450,7 @@ ul {
   padding: 21px 30px;
   text-align: center;
   overflow: hidden;
+  word-break: break-word;
   z-index: 2;
   line-height: 1;
 }
@@ -484,6 +487,7 @@ ul {
   background: #E93572;
   border-radius: 40px;
   padding: 12px 20px;
+  word-break: break-word;
   line-height: 1;
 }
 
@@ -501,6 +505,7 @@ ul {
   padding: 21px 30px;
   border-radius: 40px;
   overflow: hidden;
+  word-break: break-word;
   z-index: 2;
   line-height: 1;
 }
@@ -668,7 +673,7 @@ START: Header CSS
 START: Hero CSS
 ----------------------------------------*/
 .hero-section {
-  padding-top: 183px;
+  padding-top: 185px;
   padding-bottom: 260px;
   position: relative;
   overflow: hidden;
@@ -1219,6 +1224,9 @@ START: Feature Tabs CSS
 }
 
 .feature-load-more-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
@@ -1409,6 +1417,9 @@ START: Demo Tabs CSS
 }
 
 .demo-tabs-section .demo-load-more-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
   margin-top: 20px;
 }
