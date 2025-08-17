@@ -865,16 +865,16 @@ START: Hero CSS
   max-height: max-content;
   --desktop-movement-speed: 45s;
   --mobile-movement-speed: 11s;
-  transform: rotate(-16deg);
+  transform: rotate(-9deg);
 }
 
 .hero-marquee-wrap .images-group:last-child {
   position: relative;
-  transform: rotate(-16deg);
+  transform: rotate(-9deg);
   height: 685px;
-  top: -50px;
+  top: -25px;
   overflow: hidden;
-  border-radius: 0 715px 0 0;
+  border-radius: 0 275px 0 0;
 }
 
 .hero-marquee-wrap .images-group-anim {
@@ -942,7 +942,7 @@ START: Hero CSS
   position: absolute;
   right: 0;
   top: 0;
-  column-gap: 25px;
+  column-gap: 18px;
   max-width: 560px;
   width: 100%;
   height: 560px;
@@ -1014,7 +1014,7 @@ START: Hero CSS
   }
 
   .hero-marquee-wrap .images-anim-box {
-    column-gap: 35px;
+    column-gap: 20px;
     max-width: 100%;
   }
 
@@ -1050,7 +1050,7 @@ START: Hero CSS
 
   .hero-marquee-wrap .images-anim-box {
     border-radius: 0 0 0 200px;
-    column-gap: 45px;
+    column-gap: 30px;
   }
 
   .hero-marquee-wrap .images-group:last-child {
