@@ -1269,24 +1269,12 @@ START: Feature Tabs CSS
   border-color: #F15A5A;
 }
 
-.feature-load-more-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin-top: 44px;
-}
-
 @media (max-width: 767px) {
   .feature-tabs-section {
     padding-top: 54px;
     padding-bottom: 54px;
     border-radius: 0;
     margin-top: 0;
-  }
-
-  .feature-load-more-button {
-    margin-top: 24px;
   }
 }
 
